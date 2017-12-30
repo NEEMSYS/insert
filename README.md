@@ -15,6 +15,14 @@ chmod 755 inject.py
 ```shell
 ./inject.py --remove
 ```
+app.c可以通过下面指令编译生成可执行文件
+```shell
+msp430-gcc -mmcu=msp430f1611 -o main.exe -O app.c
+```
+生成hex文件
+```shell
+msp430-objcopy -O ihex main.exe main.ihex
+```
 
 
 
