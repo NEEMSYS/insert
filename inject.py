@@ -1,3 +1,4 @@
+#!/usr/bin/python
 #-*- coding: utf-8 -*-
 # Author: ZhangTe
 # Insert codes to app.c for monitor occurence
