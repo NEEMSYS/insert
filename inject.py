@@ -10,7 +10,7 @@ msp430_h = '''//t2pad
 #include <msp430.h> //t2pad
 '''
 
-monitor_code = '''
+monitor_code = '''//t2pad
 // monitor code to macro definition necessary. //t2pad
 // begin //t2pad
 #define bit0 BIT0  //t2pad
@@ -86,7 +86,6 @@ def insert():
     with open('app.c', 'w') as f:
         for e in app_c_code:
             f.write(e)
-
     print 'Insert in \n#line 0 \n#line %d \n#line %d \nsucceeded.\n\nWow' % (insert_posA, insert_posB)
 
 def remove():
