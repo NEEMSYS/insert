@@ -51,7 +51,7 @@ while True:
     index += 2
     if index >= len(front_complement_0):
         break
-merge_logs = merge_logs[1:]
+merge_logs = merge_logs[1:] # 前几条数据经常是错误的
 
 # 验证数据是否合法
 is_data_err = False
