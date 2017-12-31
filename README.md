@@ -1,4 +1,5 @@
-# insert
+# insert & parse_logs
+## insert.py
 插入代码到app.c 为了在使用flocklab的时候监视任务的发生
 
 注入代码的时候需要将注入程序与app.c放入同一路径下
@@ -33,4 +34,13 @@ msp430-objcopy -O ihex main.exe main.ihex
 
 parse_logs.py 按照如上逻辑，根据引脚的trace记录，反向还原了任务ID。
 
+## parse_logs.py
+```shell
+parse_logs.py --[logs filename]
+```
+parse_logs.py 只需输入一个日志文件参数即可，该日志文件应当来源于Cooja仿真， 并且执行MspCLI命令
+```shell
+watch 0x35 | timestamp > logs-filename
+```
+0x35为MSP430的P6OUT寄存器。
 
