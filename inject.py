@@ -47,7 +47,7 @@ monitor_code = '''//t2pad
   logcalls_init(); // initialization those pin p6.0, p6.1, p6.2, p6.6, p6.7 //t2pad
 '''
 
-monitor_and_assign = 't2pad_protocol(nextTask); //t2pad'
+monitor_and_assign = 't2pad_protocol(nextTask); //t2pad\n'
 
 saygoodbye = '\nPower by Intel, NVIDIA, Linux, Assembly, C, Python, nesC, Emacs, NetEase music.'
 Usage = '''
@@ -78,7 +78,7 @@ def insert():
         if 'SchedulerBasicP__Scheduler__taskLoop' in app_c_code[i] and  app_c_code[i+1].strip() == '{':
             insert_posA = i+2
         if 'SchedulerBasicP__TaskBasic__runTask(nextTask);' in app_c_code[i]:
-            insert_posB = i
+            insert_posB = i+1
         if insert_posA != 0 and insert_posB != 0:
             break
     app_c_code.insert(insert_posA, monitor_code)
