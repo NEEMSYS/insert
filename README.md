@@ -35,6 +35,7 @@ msp430-objcopy -O ihex main.exe main.ihex
 parse_logs.py 按照如上逻辑，根据引脚的trace记录，反向还原了任务ID。
 
 ## parse_logs.py
+改程序用来还原真实的任务ID，以标准控制台输出的形式输出任务序列，如需保存，请重定向.
 ```shell
 parse_logs.py --[logs filename]
 ```
@@ -43,4 +44,6 @@ parse_logs.py 只需输入一个日志文件参数即可，该日志文件应当
 watch 0x35 | timestamp > logs-filename
 ```
 0x35为MSP430的P6OUT寄存器。
+
+
 
