@@ -6,7 +6,8 @@ import sys
 import os
 
 monitor_code = '''//t2pad
-static uint16_t collection_task[34] = {0};//t2pad
+#define TASK_AMOUNT 34 //t2pad
+static uint16_t collection_task[TASK_AMOUNT] = {0};//t2pad
 static uint16_t collectiion_cnt = 0;//t2pad
 '''
 
@@ -17,7 +18,7 @@ monitor_and_assign = '''//t2pad
         uint8_t i = 0; //t2pad
         if(collectiion_cnt >= 5000){  //t2pad
           collectiion_cnt = 0;    //t2pad
-          for(i = 0; i < 34; i++){   //t2pad
+          for(i = 0; i < TASK_AMOUNT; i++){   //t2pad
             printf("%d:%d, ", i, collection_task[i]);  //t2pad
             collection_task[i] = 0;    //t2pad
           }    //t2pad
