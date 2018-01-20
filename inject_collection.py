@@ -22,6 +22,7 @@ monitor_and_assign = '''//t2pad
             printf("%d:%d, ", i, collection_task[i]);  //t2pad
             collection_task[i] = 0;    //t2pad
           }    //t2pad
+          printf("\n"); //t2pad
         }      //t2pad
       }        //t2pad
 '''
