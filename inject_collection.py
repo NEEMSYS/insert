@@ -71,7 +71,7 @@ def insert():
     with open('app.c', 'w') as f:
         for e in app_c_code:
             f.write(e)
-
+    print 'The number of task is {}'.format(len(tasks))
     print 'Insert in \n#line 0 \n#line %d \n#line %d \nsucceeded.\n\nWow' % (insert_posA, insert_posB)
 
 def remove():
