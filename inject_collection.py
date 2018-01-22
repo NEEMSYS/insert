@@ -22,10 +22,12 @@ monitor_and_assign = '''//t2pad
         uint8_t i = 0; //t2pad
         if(collectiion_cnt >= %s){  //t2pad
           collectiion_cnt = 0;    //t2pad
+          printf("{"); //for json format //t2pad
           for(i = 0; i < TASK_AMOUNT; i++){   //t2pad
-            printf("%%d:%%d, ", i, collection_task[i]);  //t2pad
+            printf("%%d:%%d,", i, collection_task[i]);  //t2pad
             collection_task[i] = 0;    //t2pad
           }    //t2pad
+          printf("}\n"); //t2pad
         }      //t2pad
       }        //t2pad
 '''
