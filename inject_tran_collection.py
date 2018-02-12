@@ -51,9 +51,9 @@ codes_collect = '''{//t2pad
         printf("{");//t2pad
         for(i=0; i<COUPLE_AMOUNT; i++){//t2pad
           if(i != COUPLE_AMOUNT-1) //t2pad
-              printf("\\"%d->%d\\", %d, ", couples[i][0], couples[i][1], couples[i][2]);//t2pad
+              printf("\\"%d->%d\\": %d, ", couples[i][0], couples[i][1], couples[i][2]);//t2pad
           else //t2pad
-              printf("\\"%d->%d\\", %d", couples[i][0], couples[i][1], couples[i][2]);//t2pad
+              printf("\\"%d->%d\\": %d", couples[i][0], couples[i][1], couples[i][2]);//t2pad
           couples[i][2] = 0;//t2pad
         }//t2pad
         printf("}\\n\\n");//t2pad
