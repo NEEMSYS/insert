@@ -1,4 +1,7 @@
 # insert & parse_logs
+## Note:
+由于使用了四个GPIO引脚,分两次传输8位任务ID,因此速度引脚翻转速度非常快,需要用高速采样设备(such as FPGA)进行采样
+
 ## insert.py
 插入代码到app.c 为了在使用flocklab的时候监视任务的发生
 
